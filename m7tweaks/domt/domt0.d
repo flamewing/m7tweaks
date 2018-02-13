@@ -1,0 +1,20 @@
+// This file makes all of the card choices always trigger on the list, but
+// respecting the 'bad card' limitations of the Deck of Many Things.
+ALTER_TRANS DOMT BEGIN 2 END BEGIN 0 1 2 3 4 5 END
+	BEGIN TRIGGER ~~ END
+
+ALTER_TRANS DOMT BEGIN 4 END BEGIN 4 5 END
+	BEGIN TRIGGER ~~ END
+
+ALTER_TRANS DOMT BEGIN 3 END BEGIN 0 1 2 3 4 5 END
+	BEGIN TRIGGER ~Global("BadCardDrawn","GLOBAL",0)~ END
+
+ALTER_TRANS DOMT BEGIN 3 END BEGIN 6 7 8 9 10 11 END
+	BEGIN TRIGGER ~Global("BadCardDrawn","GLOBAL",1)~ END
+
+ALTER_TRANS DOMT BEGIN 4 END BEGIN 0 1 2 3 END
+	BEGIN TRIGGER ~Global("BadCardDrawn","GLOBAL",0)~ END
+
+ALTER_TRANS DOMT BEGIN 4 END BEGIN 6 7 8 9 END
+	BEGIN TRIGGER ~Global("BadCardDrawn","GLOBAL",1)~ END
+

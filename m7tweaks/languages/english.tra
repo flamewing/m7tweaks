@@ -1,0 +1,61 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@1 = ~This component requires Throne of Bhaal~
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@1000000 = ~Convenient Deck of Many Things: Always win against Aesgareth~
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@1100000 = ~Convenient/Cheesy/Cheating Deck of Many Things~
+@1100001 = ~Convenient: Select from normal available choices in each draw~
+@1100002 = ~Convenient Plus: As above, but ignore 'Bad Card' restrictions~
+@1100003 = ~Cheesy: All cards can be selected in any of the 3 draws~
+@1100004 = ~Cheating: As the cheesy version, but with infinite draws~
+@1101006 = ~Draw Donjon (Bad Card, Suffer Imprisonment, with save)~
+@1101007 = ~Draw Ruin (Bad Card, Lose all gold)~
+@1101008 = ~Draw Euryale (Permanent -1 to all saving throws)~
+@1101009 = ~Draw Flames (Summon hostile Baalor and fire elementals)~
+@1101010 = ~Draw Gem (Gain several gems)~
+@1101011 = ~Draw Jester (Gain 50,000 Experience Points)~
+@1101012 = ~Draw Void (Bad Card, Suffer Disintegration, with save)~
+@1101013 = ~Draw Magician (Bad Card, Polymorph into rabbit)~
+@1101014 = ~Draw Knight (Summon 4 hostile Death Knights)~
+@1101015 = ~Draw Rogue (Permanent Dire Charm, with save)~
+@1101016 = ~Draw Sun (Party gains 300,000 Experience Points)~
+@1101017 = ~Draw Vizier (Gain Mantle spell for 1 day)~
+@1101018 = ~Draw Key (Gain a Ring of Protection +3)~
+@1101019 = ~Draw Star (Gain stat bonus)~
+@1101020 = ~Draw Skull (Summon hostile Death Shade)~
+@1101021 = ~Draw Moon (Gain permament increase of 10 Hit Points)~
+@1101022 = ~Draw Talons (Blindness, with save)~
+@1101023 = ~Draw Fool (Lower Wisdom to 3, with save)~
+@1101024 = ~Draw Comet (Gain permanent increase of 5% Fire Resistance)~
+@1101025 = ~Draw Fates (Gain +1 to all stats for 1 day)~
+@1101026 = ~Draw Throne (Party gains 1,000,000 Experience Points)~
+@1101027 = ~Increase Strength~
+@1101028 = ~Increase Wisdom~
+@1101029 = ~Increase Intelligence~
+@1101030 = ~Increase Dexterity~
+@1101031 = ~Increase Charisma~
+@1101032 = ~You feel a surge of Charisma.~
+@1101033 = ~Draw Balance (Destroys the deck)~
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@1200000 = ~Convenient/Cheating Machine of Lum the Mad~
+@1200001 = ~Convenient: You can simply select the desired result~
+@1200002 = ~Cheating: As above, but with infinite stat bonuses~
+@1201000 = ~Push Triangle, Green, Medium (Gain Storm Star)~
+@1201001 = ~Push Blue, Green, Long (Gain Magic Resistance)~
+@1201002 = ~Push Square, Short, Medium (Gain Strength)~
+@1201003 = ~Push Square, Blue, Short (Gain Dexterity)~
+@1201004 = ~Push Circle, Red, Long (Gain Constitution)~
+@1201005 = ~Push Circle, Blue, Long (Gain Intelligence)~
+@1201006 = ~Push Circle, Square, Triangle (Gain Wisdom)~
+@1201007 = ~Push Red, Green, Short (Gain Charisma)~
+@1201008 = ~Push Triangle, Red, Medium (Trigger Portal)~
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@1300000 = ~Fix uncharming of Glaicas (De'Arnise Hold)~

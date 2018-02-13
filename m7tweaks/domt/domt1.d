@@ -1,0 +1,17 @@
+// This file makes all of the card choices always trigger on the list,
+// lifting the 'bad card' limitations of the Deck of Many Things.
+ALTER_TRANS DOMT BEGIN 2 END BEGIN 0 1 2 3 4 5 END
+	BEGIN TRIGGER ~~ END
+
+ALTER_TRANS DOMT BEGIN 3 END BEGIN 0 1 2 3 4 5 7 8 END
+	BEGIN TRIGGER ~~ END
+
+ALTER_TRANS DOMT BEGIN 3 END BEGIN 6 9 10 11 END
+	BEGIN TRIGGER ~False()~ END
+
+ALTER_TRANS DOMT BEGIN 4 END BEGIN 0 1 2 3 4 5 7 END
+	BEGIN TRIGGER ~~ END
+
+ALTER_TRANS DOMT BEGIN 4 END BEGIN 6 8 9 END
+	BEGIN TRIGGER ~False()~ END
+

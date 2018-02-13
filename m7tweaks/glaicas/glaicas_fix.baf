@@ -1,0 +1,13 @@
+IF
+	StateCheck("kpglai01",STATE_CHARMED)
+	Global("KPGlai01Talked","AR1303",0)
+THEN
+	RESPONSE #100
+		SetGlobal("KPGlai01Talked","AR1303",1)
+		ApplySpell("kpglai01",FORCE_DISPEL_MAGIC)
+		ClearActions("kpglai01")
+		Wait(1)
+		ChangeEnemyAlly("kpglai01",NEUTRAL)
+		ActionOverride("kpglai01",StartDialogueNoSet([PC]))
+END
+

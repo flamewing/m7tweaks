@@ -1,0 +1,127 @@
+/*
+ * Copyright (C) 2010-2011/2018 FlameWing
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ */
+
+/******************************************************************************
+ *                                                                            *
+ *                                                                            *
+ *	Basic TP2 Stuff                                                           *
+ *                                                                            *
+ *                                                                            *
+ ******************************************************************************/
+
+
+BACKUP ~m7tweaks/backup~
+
+AUTHOR ~Flamewing~
+
+VERSION ~v1.1~
+
+NO_IF_EVAL_BUG
+
+AUTO_EVAL_STRINGS
+
+ALWAYS
+   OUTER_SPRINT m7root ~m7tweaks~
+END
+
+LANGUAGE "English" "english" ~m7tweaks/languages/english.tra~
+
+/******************************************************************************
+ *                                                                            *
+ *                                                                            *
+ *	Convenient Deck of Many Things: Always win against Aesgareth              *
+ *                                                                            *
+ *                                                                            *
+ ******************************************************************************/
+
+BEGIN @1000000 DESIGNATED 1
+	REQUIRE_PREDICATE GAME_IS ~bgt tob bg2ee eet~ @1 // ToB
+	COPY_EXISTING ~gorcamb.dlg~ ~override~
+	COMPILE ~%m7root%/gorcamb/gorcamb.d~
+
+
+/******************************************************************************
+ *                                                                            *
+ *                                                                            *
+ *	Convenient/Cheesy/Cheating Deck of Many Things                            *
+ *                                                                            *
+ *                                                                            *
+ ******************************************************************************/
+
+BEGIN @1100001 DESIGNATED 10
+	SUBCOMPONENT @1100000
+	REQUIRE_PREDICATE GAME_IS ~bgt tob bg2ee eet~ @1 // ToB
+	COPY_EXISTING ~domt.dlg~ ~override~
+	COMPILE ~%m7root%/domt/domt.d~
+	        ~%m7root%/domt/domt0.d~
+
+BEGIN @1100002 DESIGNATED 11
+	SUBCOMPONENT @1100000
+	COPY_EXISTING ~domt.dlg~ ~override~
+	COMPILE ~%m7root%/domt/domt.d~
+	        ~%m7root%/domt/domt1.d~
+
+BEGIN @1100003 DESIGNATED 12
+	SUBCOMPONENT @1100000
+	COPY_EXISTING ~domt.dlg~ ~override~
+	COMPILE ~%m7root%/domt/domt.d~
+	        ~%m7root%/domt/domt2.d~
+
+BEGIN @1100004 DESIGNATED 13
+	SUBCOMPONENT @1100000
+	COPY_EXISTING ~domt.dlg~ ~override~
+	COMPILE ~%m7root%/domt/domt.d~
+	        ~%m7root%/domt/domt3.d~
+
+
+/******************************************************************************
+ *                                                                            *
+ *                                                                            *
+ *	Convenient/Cheating Machine of Lum the Mad                                *
+ *                                                                            *
+ *                                                                            *
+ ******************************************************************************/
+
+BEGIN @1200001 DESIGNATED 20
+	SUBCOMPONENT @1200000
+	REQUIRE_PREDICATE GAME_IS ~bgt tob bg2ee eet~ @1 // ToB
+	COPY_EXISTING ~gorlum2.dlg~ ~override~
+	COMPILE ~%m7root%/lum/gorlum2a.d~
+
+BEGIN @1200002 DESIGNATED 21
+	SUBCOMPONENT @1200000
+	COPY_EXISTING ~gorlum2.dlg~ ~override~
+	COMPILE ~%m7root%/lum/gorlum2b.d~
+
+
+/******************************************************************************
+ *                                                                            *
+ *                                                                            *
+ *	Fix Glaicas Uncharm (De'Arnise Hold)                                      *
+ *                                                                            *
+ *                                                                            *
+ ******************************************************************************/
+
+BEGIN @1300000 DESIGNATED 30
+	REQUIRE_PREDICATE GAME_IS ~bgt bg2 tob~ @1 // ToB
+	EXTEND_TOP ~ar1303.bcs~ ~%m7root%/glaicas/glaicas_fix.baf~
