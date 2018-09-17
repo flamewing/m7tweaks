@@ -27,7 +27,8 @@ I have tested this with a hefty collection of mods stacked on top of each other,
 Unzip the main ZIP file into your BGII main directory and run (double-click on) "setup-m7tweaks.exe".
 
 First, pick your favorite language. Currently available languages:
-	American English
+
+- American English
 
 Then choose which components you would like to install. You may always
 uninstall them later by re-running "setup-m7tweaks.exe".
@@ -36,9 +37,9 @@ As a rule, you do *not* need to start a new game to take advantage of anything y
 
 Section 3: Components
 ----
-1. **Convenient Deck of Many Things: Always win against Aesgareth.** As the name implies, Aesgareth is changed so that he always loses against you in the 3 draws. This results in him attacking at the end when he loses the gem, so	be warned.
+1. **Convenient Deck of Many Things: Always win against Aesgareth.** As the name implies, Aesgareth is changed so that he always loses against you in the 3 draws. This results in him attacking at the end when he loses the gem, so be warned.
 
-2. **Convenient/Cheesy/Cheating Deck of Many Things.** This is aimed at reducing the number of reloads until you get what you want from the deck. This component is subdivided into four subcomponents; all of these subcomponents have one modification in common: they make the 'Star' card more convenient and flexible. By this I mean: you get an expanded stat selection, which takes into account all of a classes 'prime requisite' attributes (Paladins can increase Charisma, for example) from 2nd edition AD&D, as well as allowing which stat bonus you get -- a multiclass Fighter/Mage/Thief can elect to gain a Strength bonus, for example, instead of gaining a Dexterity increase. This component has the following subcomponents with the specified additional effect:
+2. **Convenient/Cheesy/Cheating Deck of Many Things.** This is aimed at reducing the number of reloads until you get what you want from the deck. This component is subdivided into four subcomponents; all of these subcomponents have one modification in common: they make the 'Star' card more convenient and flexible. By this I mean: you get an expanded stat selection, which takes into account all of a classes 'prime requisite' attributes (Paladins can increase Charisma, for example) from 2nd edition AD&D, as well as allowing you to chose which stat bonus you get -- a multiclass Fighter/Mage/Thief can elect to gain a Strength bonus, for example, instead of gaining a Dexterity increase as in vanilla. This component has the following subcomponents with the specified additional effect:
 
 	*2a. Convenient:* Select from normal available choices in each draw. You can select which card you will receive in this draw. The only difference from the original game is that you no longer have to reload until you get the card you want :-)
 
@@ -46,9 +47,9 @@ Section 3: Components
 
 	*2c. Cheesy:* All cards can be selected in any of the 3 draws. This component combines all cards you could possibly get from the deck into a single list shown in each of the 3 draws you get. For example, you could select 'Star' 3 times for the stat bonuses.
 
-  *2d. Cheating:* As the cheesy version, but with infinite draws. 'Balance' card is added as a choice for when you get tired of ruining the game :-)
+	*2d. Cheating:* As the cheesy version, but with infinite draws. 'Balance' card is added as a choice for when you get tired of ruining the game :-)
 
-3. **Convenient/Cheating Machine of Lum the Mad.** This component eliminates the need to remember and select the combinations for the Machine of Lum the Mad. This component is subdivided into two subcomponents, all of which have the side-effect of disabling random combinations. The subcomponents have the following additional effects:
+3. **Convenient/Cheating Machine of Lum the Mad.** This component eliminates the need to remember and select the combinations for the Machine of Lum the Mad. This component is subdivided into two subcomponents, both of which have the side-effect of disabling random combinations. The subcomponents have the following additional effects:
 
 	*3a. Convenient:* You can simply select the desired result. Pick from the descriptive list and you are done. This obeys all of the standard restrictions -- that is, each combination can be selected only once.
 
