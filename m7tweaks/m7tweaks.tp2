@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010-2011/2018 FlameWing
+ * Copyright (C) 2020 FlameWing
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -41,7 +41,7 @@ NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 
 ALWAYS
-   OUTER_SPRINT m7root ~m7tweaks~
+    OUTER_SPRINT m7root ~m7tweaks~
 END
 
 LANGUAGE "English" "english" ~m7tweaks/languages/english.tra~
@@ -125,3 +125,39 @@ BEGIN @1200002 DESIGNATED 21
 BEGIN @1300000 DESIGNATED 30
 	REQUIRE_PREDICATE GAME_IS ~bgt bg2 tob~ @1 // ToB
 	EXTEND_TOP ~ar1303.bcs~ ~%m7root%/glaicas/glaicas_fix.baf~
+
+/******************************************************************************
+ *                                                                            *
+ *                                                                            *
+ *	Thrown Weapon do not gain Strength bonus to THAC0                         *
+ *                                                                            *
+ *                                                                            *
+ ******************************************************************************/
+
+BEGIN @1400000 DESIGNATED 1
+	REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee (EE only)~ @2
+
+	// Thrown weapons with strength bonus to thaco and damage
+	COPY_EXISTING_REGEXP GLOB ~^.+.itm$~ ~override~
+		READ_LONG 0x18 "flags" ELSE 0
+		READ_SHORT 0x1C "category" ELSE 0
+		// Want droppable (daggers (16), slings (18), hammers (21), axes (25), spears (29))
+		PATCH_IF (("%flags%" & 4) = 4) AND (("%category%" = 16) OR ("%category%" = 18) OR ("%category%" = 21) OR ("%category%" = 25) OR ("%category%" = 29)) BEGIN
+			READ_LONG 0x64 "headoffset" ELSE 0
+			READ_SHORT 0x68 "headcount" ELSE 0
+			READ_LONG 0x6a "effectsoffset" ELSE 0
+			WHILE ("%headcount%" > 0) BEGIN
+				SET "abloff" = "%headoffset%" + (("%headcount%" - 1) * 0x38)
+				READ_BYTE ("%abloff%") "type" ELSE 0
+				READ_BYTE ("%abloff%" + 2) "loc" ELSE 0
+				READ_LONG ("%abloff%" + 0x26) "effflags" ELSE 0
+				// Look at ranged (type = 2) weapons (loc = 1) with full strength bonus
+				// or with no damage-only strength bonus
+				PATCH_IF ("%type%" = 2) AND ("%loc%" = 1) AND ((("%effflags%" & 1) = 1) OR (("%effflags%" & 4) = 0)) BEGIN
+					//PATCH_PRINT "%SOURCE_FILE%	%category%"
+					WRITE_LONG ("%abloff%" + 0x26) (("%effflags%" | 4) ^^ ("%effflags%" & 1))
+				END
+				SET "headcount" = ("%headcount%" - 1)
+			END
+		END
+		BUT_ONLY_IF_IT_CHANGES
